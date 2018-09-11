@@ -1,0 +1,89 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>{{ 'PIN_TITLE' | translate }}</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <form (submit)="doLogin()">
+    <ion-list>
+
+        <div text-center>
+             <ion-label class="enterPinLabel">Enter The Pin</ion-label>
+        </div>
+
+        <div text-center large margin-vertical>
+            <ion-icon [name]="'radio-button-off'" class="pinRadio"></ion-icon>
+            <ion-icon [name]="'radio-button-off'" class="pinRadio"></ion-icon>
+            <ion-icon [name]="'radio-button-off'" class="pinRadio"></ion-icon>
+            <ion-icon [name]="'radio-button-off'" class="pinRadio"></ion-icon>
+            <ion-icon [name]="'radio-button-off'" class="pinRadio"></ion-icon>
+            <ion-icon [name]="'radio-button-off'"></ion-icon>
+        </div>
+
+      <ion-grid text-center>
+          <ion-row>
+              <ion-col>
+                  <button ion-button round large outline (click)="handleInput('1')">1</button>
+              </ion-col>
+              <ion-col>
+                  <button ion-button round large outline (click)="handleInput('2')">2</button>
+              </ion-col>
+              <ion-col>
+                  <button ion-button round large outline (click)="handleInput('3')">3</button>
+              </ion-col>
+          </ion-row>
+
+          <ion-row>
+              <ion-col>
+                  <button ion-button round large outline (click)="handleInput('4')">4</button>
+              </ion-col>
+              <ion-col>
+                  <button ion-button round large outline (click)="handleInput('5')">5</button>
+              </ion-col>
+              <ion-col>
+                  <button ion-button round large outline (click)="handleInput('6')">6</button>
+              </ion-col>
+          </ion-row>
+
+          <ion-row>
+              <ion-col>
+                  <button ion-button round large outline (click)="handleInput('7')">7</button>
+              </ion-col>
+              <ion-col>
+                  <button ion-button round large outline (click)="handleInput('8')">8</button>
+              </ion-col>
+              <ion-col>
+                  <button ion-button round large outline (click)="handleInput('9')">9</button>
+              </ion-col>
+          </ion-row>
+
+          <ion-row>
+              <ion-col></ion-col>
+
+              <ion-col>
+                  <button ion-button round large outline (click)="handleInput('0')">0</button>
+              </ion-col>
+
+              <ion-col></ion-col>
+          </ion-row>
+
+          <ion-row>
+              <ion-col>
+                  <button ion-button clear large no-padding (click)="handleInput('clear')">Clear</button>
+              </ion-col>
+
+              <ion-col></ion-col>
+
+              <ion-col>
+                  <button ion-button clear large (click)="emailEvent()">OK</button>
+              </ion-col>
+          </ion-row>
+      </ion-grid>
+
+    </ion-list>
+  </form>
+</ion-content>
